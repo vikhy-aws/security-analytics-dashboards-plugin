@@ -27,7 +27,7 @@ export function setupOpensearchRoutes(services: NodeServices, router: IRouter) {
     {
       path: `${API.TIME_RANGE_QUERY}`,
       validate: {
-        query: schema.any(),
+        query: createQueryValidationSchema(),
       },
     },
     opensearchService.timeRangeQuery

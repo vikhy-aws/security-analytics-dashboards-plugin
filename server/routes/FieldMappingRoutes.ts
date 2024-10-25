@@ -55,6 +55,7 @@ export function setupFieldMappingRoutes(services: NodeServices, router: IRouter)
         params: schema.object({
           indexName: schema.string(),
         }),
+        query: createQueryValidationSchema(),
       },
     },
     fieldMappingService.getIndexAliasFields
